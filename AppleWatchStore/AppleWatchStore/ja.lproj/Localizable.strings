@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (Japanese - ja)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "ホーム";
+"tab.products" = "製品";
+"tab.bag" = "バッグ";
+"tab.favorites" = "お気に入り";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "ようこそ";
+"nav.myBag" = "マイバッグ";
+"nav.myFavorites" = "マイお気に入り";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "製品フィルター";
+
+// MARK: - Section Headers
+"section.browseByModel" = "モデルで探す";
+"section.popular" = "人気";
+"section.watchAccessories" = "ウォッチアクセサリー";
+"section.brandColors" = "ブランドカラー";
+"section.caseSizes" = "ケースサイズ";
+"section.wristSizes" = "手首サイズ";
+"section.connectivity" = "接続性";
+"section.appleCare" = "Apple Care + カバレッジ";
+
+// MARK: - Buttons
+"button.addToCart" = "カートに追加";
+"button.shop" = "ショップ";
+"button.noAppleCare" = "Apple Care + なし";
+"button.addAppleCare" = "Apple Care + を追加";
+"button.save" = "保存";
+"button.close" = "閉じる";
+
+// MARK: - Cart
+"cart.empty.title" = "製品がありません";
+"cart.empty.description" = "カートに製品を追加してください";
+"cart.case" = "%@ %@ ケース";
+"cart.loopSize" = "ループサイズ: %@";
+"cart.subtotal" = "小計";
+"cart.tax" = "税金";
+"cart.total" = "合計";
+
+// MARK: - Apple Care
+"appleCare.price" = "€99 または €4.99/月";
+"appleCare.benefit" = "偶発的な損傷に対する無制限の修理\n 保護";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d レビュー](inflect: true)";
+"product.addReview" = "レビューを追加";
+
+// MARK: - Review Form
+"review.title" = "タイトル";
+"review.yourName" = "お名前";
+"review.writeReview" = "レビューを書く";
+
+// MARK: - Product Filter
+"filter.status" = "フィルター (^[%d 件](inflect:true))";
+
+// MARK: - Layout
+"layout.label" = "レイアウト";
+"layout.options" = "レイアウトオプション";
+"layout.grid" = "グリッド";
+"layout.list" = "リスト";
+
+// MARK: - Loading
+"loading" = "読み込み中";
+
+// MARK: - Tips
+"tip.favorite.title" = "お気に入りとして保存";
+"tip.favorite.message" = "お気に入りの製品は常にお気に入りタブに表示されます";
+"tip.layout.title" = "レイアウトの切り替え";
+"tip.layout.message" = "ボタンを切り替えることでレイアウトを変更できます";
+"tip.layout.action" = "次のヒント";
+"tip.filter.title" = "製品フィルター";
+"tip.filter.message" = "このページで気になる製品を絞り込むことができます。";
+"tip.filter.action" = "閉じる";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "冒険の準備完了";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "高機能でお手頃";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "高度な健康機能";
+"featured.hermes.title" = "Apple Watch Hermes";
+"featured.hermes.description" = "ファッションの最前線";
+
+// MARK: - Categories
+"category.bands" = "Apple Watch バンド";
+"category.case" = "ケースと保護";
+"category.headphones" = "ヘッドフォンとスピーカー";
+"category.health" = "健康とフィットネス";
+"category.power" = "電源とケーブル";
+"category.chargers" = "ワイヤレス充電器";
+
+// MARK: - Payment
+"payment.delivery" = "配送";
+"payment.deliveryDetail" = "製品がご住所に発送されました。";
+"payment.total" = "合計";
+
+// MARK: - Error Messages
+"error.decode" = "データ解析エラー: 受信データを処理できません。もう一度お試しいただくか、サポートにお問い合わせください。";
+"error.invalidURL" = "URLが見つかりません: リクエストされたURLは存在しません。URLを確認し、有効なリソースを指していることを確かめてください。";
+"error.decodable" = "型の不一致: データ型が期待される型と一致しません。データを確認し、期待されるフォーマットと一致していることを確かめてください。";
+"error.invalidResponse" = "無効なサーバー応答: サーバーの応答が有効ではありません。後でもう一度お試しいただくか、サポートにお問い合わせください。";
+"error.unknown" = "サーバーに接続できません: サーバーとの接続を確立できません。サーバーがオンラインであることを確認し、後でもう一度お試しください。";
+
+// MARK: - Currency
+"currency.symbol" = "€";

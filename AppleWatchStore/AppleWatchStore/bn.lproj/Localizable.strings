@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (Bengali - bn)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "হোম";
+"tab.products" = "পণ্য";
+"tab.bag" = "ব্যাগ";
+"tab.favorites" = "পছন্দের তালিকা";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "স্বাগতম";
+"nav.myBag" = "আমার ব্যাগ";
+"nav.myFavorites" = "আমার পছন্দের তালিকা";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "পণ্য ফিল্টার";
+
+// MARK: - Section Headers
+"section.browseByModel" = "মডেল অনুযায়ী দেখুন";
+"section.popular" = "জনপ্রিয়";
+"section.watchAccessories" = "ঘড়ির আনুষাঙ্গিক";
+"section.brandColors" = "ব্র্যান্ড রঙ";
+"section.caseSizes" = "কেসের আকার";
+"section.wristSizes" = "কব্জির আকার";
+"section.connectivity" = "সংযোগ";
+"section.appleCare" = "Apple Care + কভারেজ";
+
+// MARK: - Buttons
+"button.addToCart" = "কার্টে যোগ করুন";
+"button.shop" = "কিনুন";
+"button.noAppleCare" = "Apple Care + নেই";
+"button.addAppleCare" = "Apple Care + যোগ করুন";
+"button.save" = "সংরক্ষণ করুন";
+"button.close" = "বন্ধ করুন";
+
+// MARK: - Cart
+"cart.empty.title" = "কোনো পণ্য নেই";
+"cart.empty.description" = "অনুগ্রহ করে কার্টে পণ্য যোগ করুন";
+"cart.case" = "%@ %@ কেস";
+"cart.loopSize" = "লুপের আকার: %@";
+"cart.subtotal" = "উপমোট";
+"cart.tax" = "কর";
+"cart.total" = "মোট";
+
+// MARK: - Apple Care
+"appleCare.price" = "€৯৯ বা €৪,৯৯/মাস";
+"appleCare.benefit" = "দুর্ঘটনাজনিত ক্ষতির জন্য সীমাহীন মেরামত\n সুরক্ষা";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d টি রিভিউ](inflect: true)";
+"product.addReview" = "রিভিউ যোগ করুন";
+
+// MARK: - Review Form
+"review.title" = "শিরোনাম";
+"review.yourName" = "আপনার নাম";
+"review.writeReview" = "একটি রিভিউ লিখুন";
+
+// MARK: - Product Filter
+"filter.status" = "ফিল্টার (^[%d টি আইটেম](inflect:true))";
+
+// MARK: - Layout
+"layout.label" = "বিন্যাস";
+"layout.options" = "বিন্যাসের বিকল্প";
+"layout.grid" = "গ্রিড";
+"layout.list" = "তালিকা";
+
+// MARK: - Loading
+"loading" = "লোড হচ্ছে";
+
+// MARK: - Tips
+"tip.favorite.title" = "পছন্দের তালিকায় সংরক্ষণ করুন";
+"tip.favorite.message" = "আপনার পছন্দের পণ্য সবসময় পছন্দের তালিকা ট্যাবে দেখা যাবে";
+"tip.layout.title" = "বিন্যাস পরিবর্তন করা";
+"tip.layout.message" = "বোতামটি টগল করে বিন্যাস পরিবর্তন করতে পারবেন";
+"tip.layout.action" = "পরবর্তী টিপ";
+"tip.filter.title" = "পণ্য ফিল্টার";
+"tip.filter.message" = "এই পৃষ্ঠায় আপনার পছন্দের পণ্যগুলো ফিল্টার করতে পারবেন।";
+"tip.filter.action" = "বন্ধ করুন";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "অ্যাডভেঞ্চারের জন্য প্রস্তুত";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "সক্ষম ও সাশ্রয়ী";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "উন্নত স্বাস্থ্য বৈশিষ্ট্য";
+"featured.hermes.title" = "Apple Watch Hermes";
+"featured.hermes.description" = "ফ্যাশন ফরোয়ার্ড";
+
+// MARK: - Categories
+"category.bands" = "Apple Watch ব্যান্ড";
+"category.case" = "কেস ও সুরক্ষা";
+"category.headphones" = "হেডফোন ও স্পিকার";
+"category.health" = "স্বাস্থ্য ও ফিটনেস";
+"category.power" = "পাওয়ার ও ক্যাবল";
+"category.chargers" = "ওয়্যারলেস চার্জার";
+
+// MARK: - Payment
+"payment.delivery" = "ডেলিভারি";
+"payment.deliveryDetail" = "আপনার পণ্যগুলো আপনার ঠিকানায় পাঠানো হয়েছে।";
+"payment.total" = "মোট";
+
+// MARK: - Error Messages
+"error.decode" = "ডেটা পার্সিং ত্রুটি: প্রাপ্ত ডেটা প্রক্রিয়া করতে অক্ষম। অনুগ্রহ করে আবার চেষ্টা করুন বা সহায়তার সাথে যোগাযোগ করুন।";
+"error.invalidURL" = "URL পাওয়া যায়নি: অনুরোধকৃত URL বিদ্যমান নেই। অনুগ্রহ করে URL যাচাই করুন এবং নিশ্চিত করুন এটি একটি বৈধ রিসোর্সের দিকে নির্দেশ করছে।";
+"error.decodable" = "ধরনের অমিল: ডেটার ধরন প্রত্যাশিত ধরনের সাথে মেলে না। অনুগ্রহ করে ডেটা পরীক্ষা করুন এবং নিশ্চিত করুন এটি প্রত্যাশিত বিন্যাসের সাথে মেলে।";
+"error.invalidResponse" = "অবৈধ সার্ভার প্রতিক্রিয়া: সার্ভারের প্রতিক্রিয়া বৈধ নয়। অনুগ্রহ করে পরে আবার চেষ্টা করুন বা সহায়তার সাথে যোগাযোগ করুন।";
+"error.unknown" = "সার্ভারে পৌঁছানো যাচ্ছে না: সার্ভারের সাথে সংযোগ স্থাপন করতে অক্ষম। অনুগ্রহ করে নিশ্চিত করুন সার্ভারটি অনলাইনে আছে এবং পরে আবার চেষ্টা করুন।";
+
+// MARK: - Currency
+"currency.symbol" = "€";

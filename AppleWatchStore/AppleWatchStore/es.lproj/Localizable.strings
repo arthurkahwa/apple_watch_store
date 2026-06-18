@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (Spanish - es)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "Inicio";
+"tab.products" = "Productos";
+"tab.bag" = "Bolsa";
+"tab.favorites" = "Favoritos";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "Bienvenido";
+"nav.myBag" = "MI BOLSA";
+"nav.myFavorites" = "MIS FAVORITOS";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "FILTROS DE PRODUCTOS";
+
+// MARK: - Section Headers
+"section.browseByModel" = "Explorar Por Modelo";
+"section.popular" = "Popular";
+"section.watchAccessories" = "Accesorios Para el Reloj";
+"section.brandColors" = "Colores de Marca";
+"section.caseSizes" = "Tamaños de Caja";
+"section.wristSizes" = "Tamaños de Muñeca";
+"section.connectivity" = "Conectividad";
+"section.appleCare" = "apple Care + Cobertura";
+
+// MARK: - Buttons
+"button.addToCart" = "Añadir al Carrito";
+"button.shop" = "Comprar";
+"button.noAppleCare" = "Sin Apple Care +";
+"button.addAppleCare" = "Añadir Apple Care +";
+"button.save" = "Guardar";
+"button.close" = "CERRAR";
+
+// MARK: - Cart
+"cart.empty.title" = "Sin Productos";
+"cart.empty.description" = "Por favor, añade productos al carrito";
+"cart.case" = "Caja %@ %@";
+"cart.loopSize" = "Tamaño de Correa: %@";
+"cart.subtotal" = "Subtotal";
+"cart.tax" = "Impuesto";
+"cart.total" = "Total";
+
+// MARK: - Apple Care
+"appleCare.price" = "€99 o €4,99/mes";
+"appleCare.benefit" = "Reparaciones ilimitadas por daños accidentales\n protección";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d Reseñas](inflect: true)";
+"product.addReview" = "AÑADIR RESEÑA";
+
+// MARK: - Review Form
+"review.title" = "Título";
+"review.yourName" = "Tu Nombre";
+"review.writeReview" = "Escribe una Reseña";
+
+// MARK: - Product Filter
+"filter.status" = "FILTRO (^[%d ELEMENTO](inflect:true))";
+
+// MARK: - Layout
+"layout.label" = "Diseño";
+"layout.options" = "Opciones de Diseño";
+"layout.grid" = "Cuadrícula";
+"layout.list" = "Lista";
+
+// MARK: - Loading
+"loading" = "Cargando";
+
+// MARK: - Tips
+"tip.favorite.title" = "Guardar como favorito";
+"tip.favorite.message" = "Tu producto favorito siempre aparece en la pestaña de favoritos";
+"tip.layout.title" = "Cambiar Diseños";
+"tip.layout.message" = "Puedes elegir cambiar el diseño pulsando el botón";
+"tip.layout.action" = "Siguiente Consejo";
+"tip.filter.title" = "Filtros de Productos";
+"tip.filter.message" = "Puedes filtrar los productos que te interesan en esta página.";
+"tip.filter.action" = "Descartar";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "Listo para la aventura";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "Capaz y asequible";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "Funciones de salud avanzadas";
+"featured.hermes.title" = "Apple Watch Hermes";
+"featured.hermes.description" = "Moda Vanguardista";
+
+// MARK: - Categories
+"category.bands" = "Correas para Apple Watch";
+"category.case" = "Carcasa y Protección";
+"category.headphones" = "Auriculares y Altavoces";
+"category.health" = "Salud y Fitness";
+"category.power" = "Energía y Cables";
+"category.chargers" = "Cargadores Inalámbricos";
+
+// MARK: - Payment
+"payment.delivery" = "Entrega";
+"payment.deliveryDetail" = "Tus productos han sido enviados a tu dirección.";
+"payment.total" = "Total";
+
+// MARK: - Error Messages
+"error.decode" = "Error de Análisis de Datos: No se pueden procesar los datos recibidos. Por favor, inténtalo de nuevo o contacta con el soporte.";
+"error.invalidURL" = "URL No Encontrada: La URL solicitada no existe. Por favor, verifica la URL y asegúrate de que apunta a un recurso válido.";
+"error.decodable" = "Tipo Incompatible: El tipo de dato no coincide con el tipo esperado. Por favor, comprueba los datos y asegúrate de que coinciden con el formato esperado.";
+"error.invalidResponse" = "Respuesta del Servidor No Válida: La respuesta del servidor no es válida. Por favor, inténtalo más tarde o contacta con el soporte.";
+"error.unknown" = "Servidor Inaccesible: No se puede establecer una conexión con el servidor. Por favor, asegúrate de que el servidor está en línea e inténtalo de nuevo más tarde.";
+
+// MARK: - Currency
+"currency.symbol" = "€";

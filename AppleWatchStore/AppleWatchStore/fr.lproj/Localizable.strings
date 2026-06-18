@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (French - fr)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "Accueil";
+"tab.products" = "Produits";
+"tab.bag" = "Panier";
+"tab.favorites" = "Favoris";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "Bienvenue";
+"nav.myBag" = "MON PANIER";
+"nav.myFavorites" = "MES FAVORIS";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "FILTRES PRODUITS";
+
+// MARK: - Section Headers
+"section.browseByModel" = "Parcourir par modèle";
+"section.popular" = "Populaire";
+"section.watchAccessories" = "Accessoires pour montre";
+"section.brandColors" = "Couleurs de la marque";
+"section.caseSizes" = "Tailles du boîtier";
+"section.wristSizes" = "Tailles du poignet";
+"section.connectivity" = "Connectivité";
+"section.appleCare" = "apple Care + Couverture";
+
+// MARK: - Buttons
+"button.addToCart" = "Ajouter au panier";
+"button.shop" = "Acheter";
+"button.noAppleCare" = "Sans Apple Care +";
+"button.addAppleCare" = "Ajouter Apple Care +";
+"button.save" = "Enregistrer";
+"button.close" = "FERMER";
+
+// MARK: - Cart
+"cart.empty.title" = "Aucun produit";
+"cart.empty.description" = "Veuillez ajouter des produits au panier";
+"cart.case" = "Boîtier %@ %@";
+"cart.loopSize" = "Taille du bracelet : %@";
+"cart.subtotal" = "Sous-total";
+"cart.tax" = "Taxe";
+"cart.total" = "Total";
+
+// MARK: - Apple Care
+"appleCare.price" = "99 € ou 4,99 €/mois";
+"appleCare.benefit" = "Réparations illimitées pour les dommages accidentels\n protection";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d avis](inflect: true)";
+"product.addReview" = "AJOUTER UN AVIS";
+
+// MARK: - Review Form
+"review.title" = "Titre";
+"review.yourName" = "Votre nom";
+"review.writeReview" = "Écrire un avis";
+
+// MARK: - Product Filter
+"filter.status" = "FILTRE (^[%d ARTICLE](inflect:true))";
+
+// MARK: - Layout
+"layout.label" = "Disposition";
+"layout.options" = "Options de disposition";
+"layout.grid" = "Grille";
+"layout.list" = "Liste";
+
+// MARK: - Loading
+"loading" = "Chargement";
+
+// MARK: - Tips
+"tip.favorite.title" = "Enregistrer comme favori";
+"tip.favorite.message" = "Votre produit favori apparaît toujours dans l'onglet Favoris";
+"tip.layout.title" = "Changer de disposition";
+"tip.layout.message" = "Vous pouvez choisir de changer de disposition en appuyant sur le bouton";
+"tip.layout.action" = "Conseil suivant";
+"tip.filter.title" = "Filtres produits";
+"tip.filter.message" = "Vous pouvez filtrer les produits qui vous intéressent sur cette page.";
+"tip.filter.action" = "Ignorer";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "Prête pour l'aventure";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "Capable et abordable";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "Fonctionnalités de santé avancées";
+"featured.hermes.title" = "Apple Watch Hermès";
+"featured.hermes.description" = "Mode avant-gardiste";
+
+// MARK: - Categories
+"category.bands" = "Bracelets Apple Watch";
+"category.case" = "Boîtier et protection";
+"category.headphones" = "Écouteurs et enceintes";
+"category.health" = "Santé et fitness";
+"category.power" = "Alimentation et câbles";
+"category.chargers" = "Chargeurs sans fil";
+
+// MARK: - Payment
+"payment.delivery" = "Livraison";
+"payment.deliveryDetail" = "Vos produits ont été envoyés à votre adresse.";
+"payment.total" = "Total";
+
+// MARK: - Error Messages
+"error.decode" = "Erreur d'analyse des données : impossible de traiter les données reçues. Veuillez réessayer ou contacter le support.";
+"error.invalidURL" = "URL introuvable : l'URL demandée n'existe pas. Veuillez vérifier l'URL et vous assurer qu'elle pointe vers une ressource valide.";
+"error.decodable" = "Type incompatible : le type de données ne correspond pas au type attendu. Veuillez vérifier les données et vous assurer qu'elles correspondent au format attendu.";
+"error.invalidResponse" = "Réponse serveur invalide : la réponse du serveur n'est pas valide. Veuillez réessayer plus tard ou contacter le support.";
+"error.unknown" = "Serveur inaccessible : impossible d'établir une connexion avec le serveur. Veuillez vous assurer que le serveur est en ligne et réessayer plus tard.";
+
+// MARK: - Currency
+"currency.symbol" = "€";

@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (Arabic - ar)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "الرئيسية";
+"tab.products" = "المنتجات";
+"tab.bag" = "الحقيبة";
+"tab.favorites" = "المفضلة";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "مرحباً";
+"nav.myBag" = "حقيبتي";
+"nav.myFavorites" = "مفضلتي";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "تصفية المنتجات";
+
+// MARK: - Section Headers
+"section.browseByModel" = "تصفح حسب الطراز";
+"section.popular" = "الأكثر شعبية";
+"section.watchAccessories" = "إكسسوارات الساعة";
+"section.brandColors" = "ألوان العلامة التجارية";
+"section.caseSizes" = "أحجام الهيكل";
+"section.wristSizes" = "أحجام المعصم";
+"section.connectivity" = "الاتصال";
+"section.appleCare" = "تغطية Apple Care +";
+
+// MARK: - Buttons
+"button.addToCart" = "أضف إلى السلة";
+"button.shop" = "تسوق";
+"button.noAppleCare" = "بدون Apple Care +";
+"button.addAppleCare" = "إضافة Apple Care +";
+"button.save" = "حفظ";
+"button.close" = "إغلاق";
+
+// MARK: - Cart
+"cart.empty.title" = "لا توجد منتجات";
+"cart.empty.description" = "يرجى إضافة منتجات إلى السلة";
+"cart.case" = "هيكل %@ %@";
+"cart.loopSize" = "حجم الحزام: %@";
+"cart.subtotal" = "المجموع الجزئي";
+"cart.tax" = "الضريبة";
+"cart.total" = "الإجمالي";
+
+// MARK: - Apple Care
+"appleCare.price" = "٩٩ يورو أو ٤٫٩٩ يورو/شهر";
+"appleCare.benefit" = "إصلاحات غير محدودة للأضرار العرضية\n والحماية";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d تقييم](inflect: true)";
+"product.addReview" = "إضافة تقييم";
+
+// MARK: - Review Form
+"review.title" = "العنوان";
+"review.yourName" = "اسمك";
+"review.writeReview" = "اكتب تقييماً";
+
+// MARK: - Product Filter
+"filter.status" = "التصفية (^[%d عنصر](inflect:true))";
+
+// MARK: - Layout
+"layout.label" = "التخطيط";
+"layout.options" = "خيارات التخطيط";
+"layout.grid" = "شبكة";
+"layout.list" = "قائمة";
+
+// MARK: - Loading
+"loading" = "جارٍ التحميل";
+
+// MARK: - Tips
+"tip.favorite.title" = "حفظ كمفضلة";
+"tip.favorite.message" = "يظهر منتجك المفضل دائماً في تبويب المفضلة";
+"tip.layout.title" = "تبديل التخطيطات";
+"tip.layout.message" = "يمكنك اختيار تبديل التخطيط عبر الضغط على الزر";
+"tip.layout.action" = "التلميح التالي";
+"tip.filter.title" = "تصفية المنتجات";
+"tip.filter.message" = "يمكنك تصفية المنتجات التي تهمك في هذه الصفحة.";
+"tip.filter.action" = "إغلاق";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "جاهز للمغامرة";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "قدرات عالية بسعر مناسب";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "ميزات صحية متطورة";
+"featured.hermes.title" = "Apple Watch Hermes";
+"featured.hermes.description" = "أناقة استثنائية";
+
+// MARK: - Categories
+"category.bands" = "أحزمة Apple Watch";
+"category.case" = "الهيكل والحماية";
+"category.headphones" = "سماعات الرأس والمكبرات";
+"category.health" = "الصحة واللياقة البدنية";
+"category.power" = "الطاقة والكابلات";
+"category.chargers" = "الشواحن اللاسلكية";
+
+// MARK: - Payment
+"payment.delivery" = "التوصيل";
+"payment.deliveryDetail" = "تم إرسال منتجاتك إلى عنوانك.";
+"payment.total" = "الإجمالي";
+
+// MARK: - Error Messages
+"error.decode" = "خطأ في معالجة البيانات: تعذّر معالجة البيانات المستلمة. يرجى المحاولة مرة أخرى أو التواصل مع الدعم.";
+"error.invalidURL" = "الرابط غير موجود: الرابط المطلوب غير موجود. يرجى التحقق من الرابط والتأكد من أنه يشير إلى مورد صالح.";
+"error.decodable" = "عدم تطابق النوع: نوع البيانات لا يتطابق مع النوع المتوقع. يرجى التحقق من البيانات والتأكد من تطابقها مع التنسيق المتوقع.";
+"error.invalidResponse" = "استجابة خادم غير صالحة: استجابة الخادم غير صالحة. يرجى المحاولة لاحقاً أو التواصل مع الدعم.";
+"error.unknown" = "الخادم غير متاح: تعذّر الاتصال بالخادم. يرجى التأكد من أن الخادم متصل بالإنترنت والمحاولة مرة أخرى لاحقاً.";
+
+// MARK: - Currency
+"currency.symbol" = "€";

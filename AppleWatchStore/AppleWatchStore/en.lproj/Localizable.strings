@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (English - Base)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "Home";
+"tab.products" = "Products";
+"tab.bag" = "Bag";
+"tab.favorites" = "Favorites";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "Welcome";
+"nav.myBag" = "MY BAG";
+"nav.myFavorites" = "MY FAVORITES";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "PRODUCT FILTERS";
+
+// MARK: - Section Headers
+"section.browseByModel" = "Browse By Model";
+"section.popular" = "Popular";
+"section.watchAccessories" = "Watch Accessories";
+"section.brandColors" = "Brand Colors";
+"section.caseSizes" = "Case Sizes";
+"section.wristSizes" = "Wrist Sizes";
+"section.connectivity" = "Connectivity";
+"section.appleCare" = "apple Care + Coverage";
+
+// MARK: - Buttons
+"button.addToCart" = "Add To Cart";
+"button.shop" = "Shop";
+"button.noAppleCare" = "No Apple Care +";
+"button.addAppleCare" = "Add Apple Care +";
+"button.save" = "Save";
+"button.close" = "CLOSE";
+
+// MARK: - Cart
+"cart.empty.title" = "No Products";
+"cart.empty.description" = "Please add products to the cart";
+"cart.case" = "%@ %@ Case";
+"cart.loopSize" = "Loop Size: %@";
+"cart.subtotal" = "Subtotal";
+"cart.tax" = "Tax";
+"cart.total" = "Total";
+
+// MARK: - Apple Care
+"appleCare.price" = "€99 or €4,99/month";
+"appleCare.benefit" = "Unlimited repairs for accidental damage\n protection";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d Reviews](inflect: true)";
+"product.addReview" = "ADD REVIEW";
+
+// MARK: - Review Form
+"review.title" = "Title";
+"review.yourName" = "Your Name";
+"review.writeReview" = "Write A Review";
+
+// MARK: - Product Filter
+"filter.status" = "FILTER (^[%d ITEM](inflect:true))";
+
+// MARK: - Layout
+"layout.label" = "Layout";
+"layout.options" = "Layout Options";
+"layout.grid" = "Grid";
+"layout.list" = "List";
+
+// MARK: - Loading
+"loading" = "Loading";
+
+// MARK: - Tips
+"tip.favorite.title" = "Save as a favorite";
+"tip.favorite.message" = "Your favorite product always appears in the favorites tab";
+"tip.layout.title" = "Switching Layouts";
+"tip.layout.message" = "You can choose to switch layouts by toggling the button";
+"tip.layout.action" = "Next Tip";
+"tip.filter.title" = "Product Filters";
+"tip.filter.message" = "You can filter for those products that interest you on this page.";
+"tip.filter.action" = "Dismiss";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "Ready for adventure";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "Capable and affordable";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "Advanced health features";
+"featured.hermes.title" = "Apple Watch Hermes";
+"featured.hermes.description" = "Fashion Forward";
+
+// MARK: - Categories
+"category.bands" = "Apple Watch Bands";
+"category.case" = "Case And Protection";
+"category.headphones" = "Headphones And Speakers";
+"category.health" = "Health And Fitness";
+"category.power" = "Power And Cables";
+"category.chargers" = "Wireless Chargers";
+
+// MARK: - Payment
+"payment.delivery" = "Delivery";
+"payment.deliveryDetail" = "Your products have been sent to your address.";
+"payment.total" = "Total";
+
+// MARK: - Error Messages
+"error.decode" = "Data Parsing Error: Unable to process the received data. Please try again or contact support.";
+"error.invalidURL" = "URL Not Found: The requested URL does not exist. Please verify the URL and ensure it points to a valid resource.";
+"error.decodable" = "Type Mismatch: The data type does not match the expected type. Please check the data and ensure it matches the expected format.";
+"error.invalidResponse" = "Invalid Server Response: The server response is not valid. Please try again later or contact support.";
+"error.unknown" = "Server Unreachable: Unable to establish a connection with the server. Please ensure the server is online and try again later.";
+
+// MARK: - Currency
+"currency.symbol" = "€";

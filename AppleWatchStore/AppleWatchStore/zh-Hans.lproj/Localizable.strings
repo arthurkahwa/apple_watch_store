@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (Simplified Chinese - zh-Hans)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "主页";
+"tab.products" = "产品";
+"tab.bag" = "购物袋";
+"tab.favorites" = "收藏";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "欢迎";
+"nav.myBag" = "我的购物袋";
+"nav.myFavorites" = "我的收藏";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "产品筛选";
+
+// MARK: - Section Headers
+"section.browseByModel" = "按型号浏览";
+"section.popular" = "热门";
+"section.watchAccessories" = "手表配件";
+"section.brandColors" = "品牌颜色";
+"section.caseSizes" = "表壳尺寸";
+"section.wristSizes" = "腕带尺寸";
+"section.connectivity" = "连接方式";
+"section.appleCare" = "Apple Care + 保障";
+
+// MARK: - Buttons
+"button.addToCart" = "加入购物车";
+"button.shop" = "立即购买";
+"button.noAppleCare" = "不添加 Apple Care +";
+"button.addAppleCare" = "添加 Apple Care +";
+"button.save" = "保存";
+"button.close" = "关闭";
+
+// MARK: - Cart
+"cart.empty.title" = "暂无产品";
+"cart.empty.description" = "请将产品加入购物车";
+"cart.case" = "%@ %@ 表壳";
+"cart.loopSize" = "表带尺寸：%@";
+"cart.subtotal" = "小计";
+"cart.tax" = "税费";
+"cart.total" = "合计";
+
+// MARK: - Apple Care
+"appleCare.price" = "€99 或 €4.99/月";
+"appleCare.benefit" = "意外损坏无限次维修\n保障";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d 条评价](inflect: true)";
+"product.addReview" = "撰写评价";
+
+// MARK: - Review Form
+"review.title" = "标题";
+"review.yourName" = "您的姓名";
+"review.writeReview" = "撰写评价";
+
+// MARK: - Product Filter
+"filter.status" = "筛选（^[%d 项](inflect:true)）";
+
+// MARK: - Layout
+"layout.label" = "布局";
+"layout.options" = "布局选项";
+"layout.grid" = "网格";
+"layout.list" = "列表";
+
+// MARK: - Loading
+"loading" = "加载中";
+
+// MARK: - Tips
+"tip.favorite.title" = "添加到收藏";
+"tip.favorite.message" = "您收藏的产品始终显示在收藏标签页中";
+"tip.layout.title" = "切换布局";
+"tip.layout.message" = "您可以通过切换按钮来选择布局方式";
+"tip.layout.action" = "下一条提示";
+"tip.filter.title" = "产品筛选";
+"tip.filter.message" = "您可以在此页面筛选您感兴趣的产品。";
+"tip.filter.action" = "关闭";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "为冒险而生";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "实力超群，价格亲民";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "先进的健康功能";
+"featured.hermes.title" = "Apple Watch Hermes";
+"featured.hermes.description" = "时尚前沿";
+
+// MARK: - Categories
+"category.bands" = "Apple Watch 表带";
+"category.case" = "保护壳与保护套";
+"category.headphones" = "耳机与音箱";
+"category.health" = "健康与健身";
+"category.power" = "电源与数据线";
+"category.chargers" = "无线充电器";
+
+// MARK: - Payment
+"payment.delivery" = "配送";
+"payment.deliveryDetail" = "您的产品已发送至您的地址。";
+"payment.total" = "合计";
+
+// MARK: - Error Messages
+"error.decode" = "数据解析错误：无法处理接收到的数据。请重试或联系支持团队。";
+"error.invalidURL" = "URL 未找到：请求的 URL 不存在。请验证 URL 并确保其指向有效资源。";
+"error.decodable" = "类型不匹配：数据类型与预期类型不符。请检查数据并确保其符合预期格式。";
+"error.invalidResponse" = "无效的服务器响应：服务器响应无效。请稍后重试或联系支持团队。";
+"error.unknown" = "服务器无法访问：无法与服务器建立连接。请确保服务器在线后重试。";
+
+// MARK: - Currency
+"currency.symbol" = "€";

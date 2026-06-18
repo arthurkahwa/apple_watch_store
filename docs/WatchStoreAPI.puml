@@ -1,0 +1,59 @@
+@startyaml
+openapi: 3.0.0
+info:
+  title: Apple Watch Store
+  version: 1.0.0
+  description: API for the Apple Watch Store
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+  /product-filters:
+    get:
+      summary: Get Product Filters
+      operationId: getProductFilters
+      tags:
+        - Filters
+      parameters:
+        - name: id
+          in: query
+          required: false
+          description: Filter by ID (e.g. material-aluminum)
+          schema:
+            type: string
+            example: material-aluminum
+      responses:
+        '200':
+          description: A list of product filters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+
+  /products:
+    get:
+      summary: Get Products
+      operationId: getProducts
+      tags:
+        - Products
+      responses:
+        '200':
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+@@endyaml

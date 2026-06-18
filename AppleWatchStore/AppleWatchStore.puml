@@ -1,0 +1,835 @@
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+set namespaceSeparator none
+
+
+class "HttpClient" as HttpClient << (P, GoldenRod) protocol >> { 
+  ~request(endpoint:responseModel:) 
+}
+class "EndPoint" as EndPoint << (P, GoldenRod) protocol >> { 
+  ~schema : String
+  ~host : String
+  ~path : String
+  ~method : RequestMethod
+  ~header : [String: String]?
+  ~body : [String: String]?
+  ~port : Int 
+}
+class "ProductServiceable" as ProductServiceable << (P, GoldenRod) protocol >> { 
+  ~fetchProducts() 
+}
+class "ProductFilterServiceable" as ProductFilterServiceable << (P, GoldenRod) protocol >> { 
+  ~fetchProductFilters() 
+}
+class "ProductWatchFilter" as ProductWatchFilter << (P, GoldenRod) protocol >> { 
+  ~filter(products:by:) 
+}
+class "ProductFilterStrategy" as ProductFilterStrategy << (P, GoldenRod) protocol >> { 
+  ~filter(products:by:) 
+}
+class "AppleWatchStoreApp" as AppleWatchStoreApp << (S, SkyBlue) struct >> { 
+  -manager
+  -filter
+  -productDetail
+  -cart
+  ~body : some Scene 
+}
+class "ContentView" as ContentView << (S, SkyBlue) struct >> { 
+  ~cart
+  -selectedTab
+  ~body : some View 
+}
+class "DataManager" as DataManager << (C, DarkSeaGreen) >> { 
+  ~service
+  ~filterService
+  ~productData
+  ~filterData
+  ~dbInitializationProgress : Bool
+  ~modelContainer
+  ~hasSetupDatabase : Bool
+  ~init()
+  ~initializeData()
+  ~addProductReview(product:data:)
+  ~fetchProducts()
+  ~fetchFilterDat() 
+}
+class "ProductsEndpoint" as ProductsEndpoint << (E, LightSteelBlue) enum >> { 
+  ~all 
+}
+class "ProductsFilterEndPoint" as ProductsFilterEndPoint << (E, LightSteelBlue) enum >> { 
+  ~all 
+}
+class "RequestMethod" as RequestMethod << (E, LightSteelBlue) enum >> { 
+  ~delete
+  ~get
+  ~patch
+  ~post
+  ~put 
+}
+class "RequestError" as RequestError << (E, LightSteelBlue) enum >> { 
+  ~decode
+  ~invalidURL
+  ~invalidResponse
+  ~decodable
+  ~unknown
+  ~description : String 
+}
+class "ProductService" as ProductService << (S, SkyBlue) struct >> { 
+  ~fetchProducts() 
+}
+class "ProductFilterService" as ProductFilterService << (S, SkyBlue) struct >> { 
+  ~fetchProductFilters() 
+}
+class "CartProduct" as CartProduct << (C, DarkSeaGreen) >> { 
+  ~id : String
+  ~image : String
+  ~name : String
+  ~price : Float
+  ~productSeries : String
+  ~displayPrice : String
+  ~quantity : Int
+  ~description : String
+  ~bandName : String
+  ~bandColor : String
+  ~caseMaterial : String
+  ~caseFinish : String
+  ~caseSize : String
+  ~caseSizeId : String
+  ~caseAmount : Float
+  ~wristSize : String
+  ~wristSizeId : String
+  ~cellularType : ProductCellularType
+  ~init(product:caseSize:wristSize:cellularType:quantity:)
+  ~band : String
+  ~face : String
+  ~{static} default : CartProduct 
+}
+class "FeaturedProduct" as FeaturedProduct << (S, SkyBlue) struct >> { 
+  ~id
+  ~image : String
+  ~title : String
+  ~description : String
+  ~{static} default : FeaturedProduct 
+}
+class "Review" as Review << (C, DarkSeaGreen) >> { 
+  ~id : String
+  ~title : String
+  ~reviewSummary : String
+  ~rating : Float
+  ~name : String
+  ~creationDate : Date
+  ~product : Product?
+  ~init(title:reviewSummary:rating:name:creationDate:) 
+}
+class "ProductFilter" as ProductFilter << (C, DarkSeaGreen) >> { 
+  ~id : String
+  ~category : String
+  ~categoryOrder : Int
+  ~order : Int
+  ~title : String
+  ~type : String
+  ~isSelected : Bool
+  ~init(filter:) 
+}
+class "CaseSize" as CaseSize << (C, DarkSeaGreen) >> { 
+  ~id : String
+  ~size : String
+  ~desc : String
+  ~price : String
+  ~amount : Double
+  ~order : Int
+  ~init(data:) 
+}
+class "Product" as Product << (C, DarkSeaGreen) >> { 
+  ~id : String
+  ~isFeatured : Bool
+  ~bandDisplay : String
+  ~bandTypeString : String
+  ~series : String
+  ~seriesDisplay : String
+  ~materialDisplay : String
+  ~materialTypeString : String
+  ~finishDisplay : String
+  ~finishTypeString : String
+  ~bandColorType : String
+  ~bandColorDisplay : String
+  ~collection : String
+  ~collectionType : String
+  ~image : String
+  ~desc : String
+  ~isFavorite : Bool
+  ~caseSizes : [CaseSize]
+  ~wristSizes : [WristSize]
+  ~reviews : [Review]
+  ~init(product:) 
+}
+class "WristSize" as WristSize << (C, DarkSeaGreen) >> { 
+  ~id : String
+  ~size : String
+  ~desc : String
+  ~order : Int
+  ~init(data:) 
+}
+class "ProductAppleCzreType" as ProductAppleCzreType << (E, LightSteelBlue) enum >> { 
+  ~add
+  ~none 
+}
+class "ProductCellularType" as ProductCellularType << (E, LightSteelBlue) enum >> { 
+  ~none
+  ~wifiOnly
+  ~wifiAndCellular
+  ~id : String 
+}
+class "ProductDetail" as ProductDetail << (C, DarkSeaGreen) >> { 
+  ~selectedCaseSize : CaseSize?
+  ~selectedWristSSize : WristSize?
+  ~selectedGPSCellular : ProductCellularType
+  ~selectedAppleCare : ProductAppleCzreType
+  ~hasAddedToCart : Bool
+  ~{static} cellularTypeIds
+  ~addToCartCheck() 
+}
+class "ProductData" as ProductData << (C, DarkSeaGreen) >> { 
+  ~id : String
+  ~isFeatured : Bool
+  ~bandDisplay : String
+  ~bandType : String
+  ~series : String
+  ~seriesDisplay : String
+  ~materialDisplay : String
+  ~materialType : String
+  ~finishDisplay : String
+  ~finishType : String
+  ~bandColorType : String
+  ~bandColorDisplay : String
+  ~collection : String
+  ~collectionType : String
+  ~image : String
+  ~description : String
+  ~caseSizes : [CaseSizeData]
+  ~wristSizes : [WristSizeData]
+  ~isFavorite
+  ~init(id:isFeatured:bandDisplay:bandType:series:seriesDisplay:materialDisplay:materialType:finishDisplay:finishType:bandColorType:bandColorDisplay:collection:collectionType:image:description:caseSizes:wristSizes:isFavorite:) 
+}
+class "CodingKeys" as ProductData.CodingKeys << (E, LightSteelBlue) enum >> { 
+  ~id
+  ~isFeatured
+  ~bandDisplay
+  ~bandType
+  ~series
+  ~seriesDisplay
+  ~finishDisplay
+  ~finishType
+  ~materialDisplay
+  ~materialType
+  ~collection
+  ~collectionType
+  ~bandColorType
+  ~bandColorDisplay
+  ~image
+  ~description
+  ~caseSizes
+  ~wristSizes 
+}
+class "ReviewData" as ReviewData << (S, SkyBlue) struct >> { 
+  ~title : String
+  ~summary : String
+  ~name : String
+  ~rating : Float 
+}
+class "ProductFilterData" as ProductFilterData << (C, DarkSeaGreen) >> { 
+  ~id : String
+  ~category : String
+  ~categoryOrder : Int
+  ~order : Int
+  ~title : String
+  ~type : String
+  ~isSelected : Bool
+  ~init(id:category:categoryOrder:order:title:type:isSelected:) 
+}
+class "CodingKeys" as ProductFilterData.CodingKeys << (E, LightSteelBlue) enum >> { 
+  ~id
+  ~category
+  ~categoryOrder
+  ~order
+  ~title
+  ~type
+  ~isSelected 
+}
+class "CaseSizeData" as CaseSizeData << (C, DarkSeaGreen) >> { 
+  ~id
+  ~size : String
+  ~description : String
+  ~price : String
+  ~amount : Float
+  ~order : Int
+  ~init(id:size:description:price:amount:order:) 
+}
+class "ShoppingCart" as ShoppingCart << (C, DarkSeaGreen) >> { 
+  ~id
+  ~quantity : Int
+  ~cartTotal : Double
+  ~productCount : Int
+  ~products
+  ~paymentHandler
+  ~paymentSuccess
+  ~total : Double
+  ~cartQuantity : Int
+  ~increment(product:)
+  ~decrement(product:)
+  ~update(product:)
+  ~remove(at:)
+  ~getTax()
+  ~getOrderTotal()
+  ~addCartProduct(product:caseSize:wristSize:cellType:)
+  ~pay() 
+}
+class "WristSizeData" as WristSizeData << (C, DarkSeaGreen) >> { 
+  ~id
+  ~size : String
+  ~description : String
+  ~order : Int
+  ~init(id:size:description:order:)
+  ~{static} default : WristSizeData 
+}
+class "Constants" as Constants << (E, LightSteelBlue) enum >> { 
+  ~{static} gradient
+  ~{static} filterColumns
+  ~{static} columns
+  ~{static} heart : some View
+  ~{static} featuredProducts : [FeaturedProduct]
+  ~{static} categories : [(name: String, icon: String)] 
+}
+class "Sheet" as Sheet << (S, SkyBlue) struct >> { 
+  ~sheetType : SheetType
+  -make()
+  ~body : some View 
+}
+class "SheetType" as Sheet.SheetType << (E, LightSteelBlue) enum >> { 
+  ~filter
+  ~id : String 
+}
+class "ScaledFont" as ScaledFont << (S, SkyBlue) struct >> { 
+  ~sizeCategory
+  ~name : String
+  ~size : CGFloat
+  ~body(content:) 
+}
+class "WeightFontSmallCapsType" as WeightFontSmallCapsType << (E, LightSteelBlue) enum >> { 
+  ~lowercase
+  ~uppercase
+  ~regular 
+}
+class "WeightFont" as WeightFont << (S, SkyBlue) struct >> { 
+  ~weight : UIFont.Weight
+  ~width : UIFont.Width
+  ~size : CGFloat
+  ~type : WeightFontSmallCapsType
+  ~body(content:) 
+}
+class "LibraryContent" as LibraryContent << (S, SkyBlue) struct >> { 
+  ~modifiers(base:) 
+}
+class "CustomFont" as CustomFont << (E, LightSteelBlue) enum >> { 
+  ~ultralight
+  ~regular
+  ~medium
+  ~bold
+  ~demibold
+  ~heavy 
+}
+class "ProductLayout" as ProductLayout << (E, LightSteelBlue) enum >> { 
+  ~grid
+  ~list
+  ~none
+  ~id : String
+  ~title : LocalizedStringKey
+  ~imageName : String 
+}
+class "CustomButtonStyle" as CustomButtonStyle << (S, SkyBlue) struct >> { 
+  ~radius : CGFloat
+  ~background : Color
+  ~border : Color
+  ~makeBody(configuration:) 
+}
+class "RatingReview" as RatingReview << (S, SkyBlue) struct >> { 
+  ~rating : Float
+  ~text
+  ~maxRating
+  ~offImage : Image?
+  ~onImage
+  ~body : some View
+  ~image(for:) 
+}
+class "PaymentHandler" as PaymentHandler << (C, DarkSeaGreen) >> { 
+  ~paymentController : PKPaymentAuthorizationController?
+  ~paymentSummaryItems
+  ~paymentStatus
+  ~completionHandler : PaymentCompletionHandler?
+  ~{static} supportedNetworks : [PKPaymentNetwork]
+  ~shippingMethodCalculator()
+  ~startPayment(products:total:completion:) 
+}
+class "CustomNavigationBar" as CustomNavigationBar << (S, SkyBlue) struct >> { 
+  ~init()
+  ~body(content:) 
+}
+class "CustomTabBarItem" as CustomTabBarItem << (S, SkyBlue) struct >> { 
+  ~colorsScheme
+  ~init(with:)
+  ~body(content:) 
+}
+class "SectionHeader" as SectionHeader << (S, SkyBlue) struct >> { 
+  ~title : String
+  ~icon : String
+  ~body : some View 
+}
+class "ProductFilterTip" as ProductFilterTip << (S, SkyBlue) struct >> { 
+  ~{static} productSteps : Event
+  +title : Text
+  +message : Text
+  +image : Image?
+  +actions : [Action]
+  +rules : [Rule]
+  +options : [TipOption] 
+}
+class "ProductLayoutTip" as ProductLayoutTip << (S, SkyBlue) struct >> { 
+  ~title : Text
+  ~message : Text
+  ~image : Image?
+  ~actions : [Action] 
+}
+class "FavoriteProductTip" as FavoriteProductTip << (S, SkyBlue) struct >> { 
+  ~{static} showTip : Bool
+  ~title : Text
+  ~message : Text?
+  ~image : Image? 
+}
+class "ProductSpecs" as ProductSpecs << (E, LightSteelBlue) enum >> { 
+  ~material(_:)
+  ~finish(_:)
+  ~band(_:)
+  ~none 
+}
+class "ProductMaterial" as ProductMaterial << (E, LightSteelBlue) enum >> { 
+  ~aluminium
+  ~steel
+  ~none
+  ~id : String 
+}
+class "ProductFinish" as ProductFinish << (E, LightSteelBlue) enum >> { 
+  ~starlight
+  ~midnight
+  ~gold
+  ~silver
+  ~graphite
+  ~black
+  ~red
+  ~none
+  ~id : String 
+}
+class "ProductBandType" as ProductBandType << (E, LightSteelBlue) enum >> { 
+  ~sole
+  ~braided
+  ~sportBand
+  ~sportLoop
+  ~nike
+  ~leather
+  ~steel
+  ~nylon
+  ~none
+  ~id : String 
+}
+class "ProductBaseFilter" as ProductBaseFilter << (C, DarkSeaGreen) >> { 
+  ~filter(products:by:) 
+}
+class "ProductFilterDecorator" as ProductFilterDecorator << (C, DarkSeaGreen) >> { 
+  -productFilter : ProductWatchFilter
+  ~init(productFilter:)
+  ~filter(products:by:) 
+}
+class "ProductMaterialFilter" as ProductMaterialFilter << (C, DarkSeaGreen) >> { 
+  ~filter(products:by:) 
+}
+class "ProductFinishFilter" as ProductFinishFilter << (C, DarkSeaGreen) >> { 
+  ~filter(products:by:) 
+}
+class "ProductBandFilter" as ProductBandFilter << (C, DarkSeaGreen) >> { 
+  ~filter(products:by:) 
+}
+class "ProductsFilter" as ProductsFilter << (C, DarkSeaGreen) >> { 
+  ~productFilterSpecs
+  ~fetchSaved(filters:)
+  ~filterCount : Int
+  ~clearAll()
+  ~add(spec:)
+  ~remove(spec:)
+  ~filterProducts(products:) 
+}
+class "Filter" as Filter << (C, DarkSeaGreen) >> { 
+  -strategy : ProductFilterStrategy
+  ~init(strategy:)
+  ~update(strategy:)
+  ~applyFilter(to:withSpecs:) 
+}
+class "FinishFilter" as FinishFilter << (C, DarkSeaGreen) >> { 
+  ~filter(products:by:) 
+}
+class "MaterialFilter" as MaterialFilter << (C, DarkSeaGreen) >> { 
+  ~filter(products:by:) 
+}
+class "BandFilter" as BandFilter << (C, DarkSeaGreen) >> { 
+  ~filter(products:by:) 
+}
+class "ProductsGridView" as ProductsGridView << (S, SkyBlue) struct >> { 
+  -filter
+  ~products : [Product]
+  ~body : some View 
+}
+class "ProductsView" as ProductsView << (S, SkyBlue) struct >> { 
+  -filter
+  -layout
+  -sheet : Sheet.SheetType?
+  -layoutTip
+  -filterTip
+  ~body : some View
+  ~content : some View
+  ~actionHandler(action:) 
+}
+class "WideProductItem" as WideProductItem << (S, SkyBlue) struct >> { 
+  ~product : Product
+  ~body : some View 
+}
+class "ProductFilterSectionView" as ProductFilterSectionView << (S, SkyBlue) struct >> { 
+  -filter
+  ~items : [ProductFilter]
+  ~body : some View
+  ~sectionItem(item:) 
+}
+class "ProductFilterView" as ProductFilterView << (S, SkyBlue) struct >> { 
+  -dismiss
+  -filter
+  ~productFilters : [ProductFilter]
+  -sections : [[ProductFilter]]
+  ~categories
+  ~body : some View
+  ~content : some View
+  ~filterStatus : some View
+  ~closeButton : some View 
+}
+class "ProductsListView" as ProductsListView << (S, SkyBlue) struct >> { 
+  -filter
+  ~products : [Product]
+  ~body : some View 
+}
+class "CardView" as CardView << (S, SkyBlue) struct >> { 
+  ~product : FeaturedProduct
+  ~body : some View 
+}
+class "FavoritesView" as FavoritesView << (S, SkyBlue) struct >> { 
+  ~products : [Product]
+  ~body : some View 
+}
+class "HomeView" as HomeView << (S, SkyBlue) struct >> { 
+  -manager
+  ~body : some View
+  ~content : some View 
+}
+class "BrowseSection" as BrowseSection << (S, SkyBlue) struct >> { 
+  ~body : some View 
+}
+class "PopularSection" as PopularSection << (S, SkyBlue) struct >> { 
+  ~products : [Product]
+  ~body : some View 
+}
+class "CategorySection" as CategorySection << (S, SkyBlue) struct >> { 
+  ~body : some View 
+}
+class "CategoryListItem" as CategoryListItem << (S, SkyBlue) struct >> { 
+  ~item : (name: String, icon: String)
+  ~body : some View 
+}
+class "CartView" as CartView << (S, SkyBlue) struct >> { 
+  ~cart
+  ~paymentRequest
+  ~body : some View
+  ~casrtItem(product:)
+  ~watchImage(product:)
+  ~watchDetails(product:)
+  ~cartTotals : some View
+  ~authorizationChange(phase:) 
+}
+class "GridProductItem" as GridProductItem << (S, SkyBlue) struct >> { 
+  ~product : Product
+  ~body : some View 
+}
+class "AddProductReview" as AddProductReview << (S, SkyBlue) struct >> { 
+  -dismiss
+  -manager
+  -rating : Float
+  -reviewSummary
+  -title
+  -name
+  ~product : Product
+  ~body : some View 
+}
+class "ConnectivityView" as ConnectivityView << (S, SkyBlue) struct >> { 
+  ~productDetail
+  ~body : some View 
+}
+class "WristItemView" as WristItemView << (S, SkyBlue) struct >> { 
+  ~item : WristSize
+  ~body : some View 
+}
+class "WifiCellularView" as WifiCellularView << (S, SkyBlue) struct >> { 
+  ~type : ProductCellularType
+  ~body : some View 
+}
+class "CaseSizesView" as CaseSizesView << (S, SkyBlue) struct >> { 
+  ~cart
+  ~productDetail
+  ~product : Product
+  ~sortedSizes : [CaseSize]
+  ~body : some View 
+}
+class "ProductDetailDescriptionView" as ProductDetailDescriptionView << (S, SkyBlue) struct >> { 
+  ~product : Product
+  ~body : some View 
+}
+class "AppleCareView" as AppleCareView << (S, SkyBlue) struct >> { 
+  ~productDetail
+  ~body : some View
+  ~noAppleCare : some View
+  ~addAppleCare : some View
+  ~header : some View
+  ~content : some View 
+}
+class "WristSizesView" as WristSizesView << (S, SkyBlue) struct >> { 
+  ~productDetail
+  ~product : Product
+  ~sortedSizes : [WristSize]
+  ~body : some View 
+}
+class "SizeItemView" as SizeItemView << (S, SkyBlue) struct >> { 
+  ~item : CaseSize
+  ~body : some View 
+}
+class "ProductDetailView" as ProductDetailView << (S, SkyBlue) struct >> { 
+  ~productDetail
+  ~cart
+  ~product : Product
+  ~favoriteTip
+  ~body : some View
+  ~header : some View
+  ~colors : some View
+  ~addToCart : some View
+  ~reset() 
+}
+class "ProductsEndpoint" as ProductsEndpoint0 << (X, Orchid) extension >> { 
+  ~path : String
+  ~method : RequestMethod
+  ~header : [String : String]?
+  ~body : [String : String]? 
+}
+class "ProductsFilterEndPoint" as ProductsFilterEndPoint1 << (X, Orchid) extension >> { 
+  ~path : String
+  ~method : RequestMethod
+  ~header : [String : String]?
+  ~body : [String : String]? 
+}
+class "HttpClient" as HttpClient2 << (X, Orchid) extension >> { 
+  ~request(endpoint:responseModel:) 
+}
+class "EndPoint" as EndPoint3 << (X, Orchid) extension >> { 
+  ~schema : String
+  ~host : String
+  ~port : Int 
+}
+class "ProductFilter" as ProductFilter4 << (X, Orchid) extension >> { 
+  ~{static} default : ProductFilter 
+}
+class "ProductFilter" as ProductFilter5 << (X, Orchid) extension >> { 
+  ~spec : ProductSpecs 
+}
+class "CaseSize" as CaseSize6 << (X, Orchid) extension >> { 
+  ~{static} default : CaseSize 
+}
+class "Product" as Product7 << (X, Orchid) extension >> { 
+  ~{static} default : Product 
+}
+class "Product" as Product8 << (X, Orchid) extension >> { 
+  ~displayPrice : String
+  ~title : String
+  ~detailTitle : String
+  ~band : String
+  ~face : String
+  ~createCartProductId(caseSize:wristSize:)
+  ~bandType : ProductBandType
+  ~materialType : ProductMaterial
+  ~finishType : ProductFinish
+  ~ratingAverage : Float 
+}
+class "WristSize" as WristSize9 << (X, Orchid) extension >> { 
+  ~{static} default : WristSize 
+}
+class "ProductData" as ProductData10 << (X, Orchid) extension >> { 
+  ~{static} default : ProductData 
+}
+class "ProductFilterData" as ProductFilterData11 << (X, Orchid) extension >> { 
+  ~{static} default : ProductFilterData 
+}
+class "CaseSizeData" as CaseSizeData12 << (X, Orchid) extension >> { 
+  ~{static} default : CaseSizeData 
+}
+class "View" as View << (X, Orchid) extension >> { 
+  ~custom(font:size:)
+  ~condensed(size:type:)
+  ~expanded(size:type:)
+  ~compressed(size:type:)
+  ~scaledFont(name:size:)
+  ~weighted(size:width:weight:type:) 
+}
+class "Text" as Text << (X, Orchid) extension >> { 
+  ~condensed(_:size:)
+  ~condensedLowercased(_:size:)
+  ~compressed(_:size:)
+  ~compressedLowercased(_:size:) 
+}
+class "ButtonStyle" as ButtonStyle << (X, Orchid) extension >> { 
+  ~{static} customBorder : Self
+  ~{static} customBorderedBlack : Self 
+}
+class "Collection" as Collection << (X, Orchid) extension >> { 
+  ~isNotEmpty : Bool 
+}
+class "PaymentHandler" as PaymentHandler13 << (X, Orchid) extension >> { 
+  ~paymentAuthorizationController(_:didAuthorizePayment:handler:)
+  ~paymentAuthorizationControllerDidFinish(_:) 
+}
+class "View" as View14 << (X, Orchid) extension >> { 
+  ~customNavigationBar() 
+}
+class "View" as View15 << (X, Orchid) extension >> { 
+  ~customTabBarItem(with:) 
+}
+class "Text" as Text16 << (X, Orchid) extension >> { 
+  ~ultraLight(size:)
+  ~heavy(size:)
+  ~customBold(size:) 
+}
+class "ProductsView" as ProductsView17 << (X, Orchid) extension >> { 
+  ~toolBarContent() 
+}
+App <|-- AppleWatchStoreApp : inherits
+View <|-- ContentView : inherits
+String -- RequestMethod : inherits
+String -- RequestError : inherits
+Error -- RequestError : inherits
+HttpClient <|.. ProductService : conforms to
+ProductServiceable <|.. ProductService : conforms to
+HttpClient <|.. ProductFilterService : conforms to
+ProductFilterServiceable <|.. ProductFilterService : conforms to
+Identifiable <|-- CartProduct : inherits
+Identifiable <|-- FeaturedProduct : inherits
+String -- ProductAppleCzreType : inherits
+String -- ProductCellularType : inherits
+Identifiable -- ProductCellularType : inherits
+CaseIterable -- ProductCellularType : inherits
+Identifiable <|-- ProductData : inherits
+Codable <|-- ProductData : inherits
+String -- ProductData.CodingKeys : inherits
+CodingKey -- ProductData.CodingKeys : inherits
+Codable <|-- ProductFilterData : inherits
+String -- ProductFilterData.CodingKeys : inherits
+CodingKey -- ProductFilterData.CodingKeys : inherits
+Identifiable <|-- CaseSizeData : inherits
+Codable <|-- CaseSizeData : inherits
+Identifiable <|-- ShoppingCart : inherits
+Identifiable <|-- WristSizeData : inherits
+Codable <|-- WristSizeData : inherits
+View <|-- Sheet : inherits
+Identifiable -- Sheet.SheetType : inherits
+ViewModifier <|-- ScaledFont : inherits
+ViewModifier <|-- WeightFont : inherits
+LibraryContentProvider <|-- LibraryContent : inherits
+String -- CustomFont : inherits
+String -- ProductLayout : inherits
+Identifiable -- ProductLayout : inherits
+CaseIterable -- ProductLayout : inherits
+ButtonStyle <|-- CustomButtonStyle : inherits
+View <|-- RatingReview : inherits
+NSObject <|-- PaymentHandler : inherits
+ViewModifier <|-- CustomNavigationBar : inherits
+ViewModifier <|-- CustomTabBarItem : inherits
+View <|-- SectionHeader : inherits
+Tip <|-- ProductFilterTip : inherits
+Tip <|-- ProductLayoutTip : inherits
+Tip <|-- FavoriteProductTip : inherits
+Equatable -- ProductSpecs : inherits
+String -- ProductMaterial : inherits
+Hashable -- ProductMaterial : inherits
+CaseIterable -- ProductMaterial : inherits
+String -- ProductFinish : inherits
+Hashable -- ProductFinish : inherits
+CaseIterable -- ProductFinish : inherits
+String -- ProductBandType : inherits
+Hashable -- ProductBandType : inherits
+CaseIterable -- ProductBandType : inherits
+ProductWatchFilter <|.. ProductBaseFilter : conforms to
+ProductWatchFilter <|.. ProductFilterDecorator : conforms to
+ProductFilterDecorator <|-- ProductMaterialFilter : inherits
+ProductFilterDecorator <|-- ProductFinishFilter : inherits
+ProductFilterDecorator <|-- ProductBandFilter : inherits
+ProductFilterStrategy <|.. FinishFilter : conforms to
+ProductFilterStrategy <|.. MaterialFilter : conforms to
+ProductFilterStrategy <|.. BandFilter : conforms to
+View <|-- ProductsGridView : inherits
+View <|-- ProductsView : inherits
+View <|-- WideProductItem : inherits
+View <|-- ProductFilterSectionView : inherits
+View <|-- ProductFilterView : inherits
+View <|-- ProductsListView : inherits
+View <|-- CardView : inherits
+View <|-- FavoritesView : inherits
+View <|-- HomeView : inherits
+View <|-- BrowseSection : inherits
+View <|-- PopularSection : inherits
+View <|-- CategorySection : inherits
+View <|-- CategoryListItem : inherits
+View <|-- CartView : inherits
+View <|-- GridProductItem : inherits
+View <|-- AddProductReview : inherits
+View <|-- ConnectivityView : inherits
+View <|-- WristItemView : inherits
+View <|-- WifiCellularView : inherits
+View <|-- CaseSizesView : inherits
+View <|-- ProductDetailDescriptionView : inherits
+View <|-- AppleCareView : inherits
+View <|-- WristSizesView : inherits
+View <|-- SizeItemView : inherits
+View <|-- ProductDetailView : inherits
+EndPoint <|.. ProductsEndpoint : conforms to
+EndPoint <|.. ProductsFilterEndPoint : conforms to
+PKPaymentAuthorizationControllerDelegate <|-- PaymentHandler : inherits
+ProductData +-- ProductData.CodingKeys
+ProductFilterData +-- ProductFilterData.CodingKeys
+Sheet +-- Sheet.SheetType
+ProductsEndpoint <.. ProductsEndpoint0 : ext
+ProductsFilterEndPoint <.. ProductsFilterEndPoint1 : ext
+HttpClient <.. HttpClient2 : ext
+EndPoint <.. EndPoint3 : ext
+ProductFilter <.. ProductFilter4 : ext
+ProductFilter <.. ProductFilter5 : ext
+CaseSize <.. CaseSize6 : ext
+Product <.. Product7 : ext
+Product <.. Product8 : ext
+WristSize <.. WristSize9 : ext
+ProductData <.. ProductData10 : ext
+ProductFilterData <.. ProductFilterData11 : ext
+CaseSizeData <.. CaseSizeData12 : ext
+PaymentHandler <.. PaymentHandler13 : ext
+ProductsView <.. ProductsView17 : ext
+@enduml

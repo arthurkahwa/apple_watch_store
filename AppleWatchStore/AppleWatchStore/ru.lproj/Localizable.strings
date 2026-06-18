@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (Russian - ru)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "Главная";
+"tab.products" = "Товары";
+"tab.bag" = "Корзина";
+"tab.favorites" = "Избранное";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "Добро пожаловать";
+"nav.myBag" = "МОЯ КОРЗИНА";
+"nav.myFavorites" = "МОЁ ИЗБРАННОЕ";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "ФИЛЬТРЫ ТОВАРОВ";
+
+// MARK: - Section Headers
+"section.browseByModel" = "По модели";
+"section.popular" = "Популярное";
+"section.watchAccessories" = "Аксессуары для часов";
+"section.brandColors" = "Фирменные цвета";
+"section.caseSizes" = "Размеры корпуса";
+"section.wristSizes" = "Размеры запястья";
+"section.connectivity" = "Подключение";
+"section.appleCare" = "Apple Care + Защита";
+
+// MARK: - Buttons
+"button.addToCart" = "Добавить в корзину";
+"button.shop" = "Купить";
+"button.noAppleCare" = "Без Apple Care +";
+"button.addAppleCare" = "Добавить Apple Care +";
+"button.save" = "Сохранить";
+"button.close" = "ЗАКРЫТЬ";
+
+// MARK: - Cart
+"cart.empty.title" = "Нет товаров";
+"cart.empty.description" = "Пожалуйста, добавьте товары в корзину";
+"cart.case" = "Корпус %@ %@";
+"cart.loopSize" = "Размер ремешка: %@";
+"cart.subtotal" = "Подытог";
+"cart.tax" = "Налог";
+"cart.total" = "Итого";
+
+// MARK: - Apple Care
+"appleCare.price" = "€99 или €4,99/месяц";
+"appleCare.benefit" = "Неограниченный ремонт при\n случайных повреждениях";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d отзыв](inflect: true)";
+"product.addReview" = "НАПИСАТЬ ОТЗЫВ";
+
+// MARK: - Review Form
+"review.title" = "Заголовок";
+"review.yourName" = "Ваше имя";
+"review.writeReview" = "Написать отзыв";
+
+// MARK: - Product Filter
+"filter.status" = "ФИЛЬТР (^[%d ЭЛЕМЕНТ](inflect:true))";
+
+// MARK: - Layout
+"layout.label" = "Вид";
+"layout.options" = "Варианты вида";
+"layout.grid" = "Сетка";
+"layout.list" = "Список";
+
+// MARK: - Loading
+"loading" = "Загрузка";
+
+// MARK: - Tips
+"tip.favorite.title" = "Сохранить в избранное";
+"tip.favorite.message" = "Избранный товар всегда отображается во вкладке «Избранное»";
+"tip.layout.title" = "Смена вида";
+"tip.layout.message" = "Вы можете переключать вид, нажав соответствующую кнопку";
+"tip.layout.action" = "Следующая подсказка";
+"tip.filter.title" = "Фильтры товаров";
+"tip.filter.message" = "На этой странице можно отфильтровать интересующие вас товары.";
+"tip.filter.action" = "Скрыть";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "Готов к приключениям";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "Функциональный и доступный";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "Расширенные функции здоровья";
+"featured.hermes.title" = "Apple Watch Hermes";
+"featured.hermes.description" = "Модный авангард";
+
+// MARK: - Categories
+"category.bands" = "Ремешки Apple Watch";
+"category.case" = "Чехлы и защита";
+"category.headphones" = "Наушники и колонки";
+"category.health" = "Здоровье и фитнес";
+"category.power" = "Питание и кабели";
+"category.chargers" = "Беспроводные зарядки";
+
+// MARK: - Payment
+"payment.delivery" = "Доставка";
+"payment.deliveryDetail" = "Ваши товары отправлены по вашему адресу.";
+"payment.total" = "Итого";
+
+// MARK: - Error Messages
+"error.decode" = "Ошибка обработки данных: не удалось обработать полученные данные. Пожалуйста, повторите попытку или обратитесь в службу поддержки.";
+"error.invalidURL" = "URL не найден: запрошенный URL не существует. Проверьте URL и убедитесь, что он указывает на действительный ресурс.";
+"error.decodable" = "Несоответствие типов: тип данных не соответствует ожидаемому. Проверьте данные и убедитесь, что они соответствуют ожидаемому формату.";
+"error.invalidResponse" = "Недопустимый ответ сервера: ответ сервера недействителен. Пожалуйста, повторите попытку позже или обратитесь в службу поддержки.";
+"error.unknown" = "Сервер недоступен: не удалось установить соединение с сервером. Убедитесь, что сервер работает, и повторите попытку позже.";
+
+// MARK: - Currency
+"currency.symbol" = "€";

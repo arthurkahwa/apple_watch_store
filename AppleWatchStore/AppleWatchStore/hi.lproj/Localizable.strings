@@ -1,0 +1,112 @@
+/*
+  Localizable.strings (Hindi - hi)
+  AppleWatchStore
+*/
+
+// MARK: - Tab Bar
+"tab.home" = "होम";
+"tab.products" = "उत्पाद";
+"tab.bag" = "बैग";
+"tab.favorites" = "पसंदीदा";
+
+// MARK: - Navigation Titles
+"nav.welcome" = "स्वागत है";
+"nav.myBag" = "मेरा बैग";
+"nav.myFavorites" = "मेरे पसंदीदा";
+"nav.appleWatches" = "Apple Watches";
+"nav.productFilters" = "उत्पाद फ़िल्टर";
+
+// MARK: - Section Headers
+"section.browseByModel" = "मॉडल के अनुसार ब्राउज़ करें";
+"section.popular" = "लोकप्रिय";
+"section.watchAccessories" = "घड़ी के सहायक उपकरण";
+"section.brandColors" = "ब्रांड रंग";
+"section.caseSizes" = "केस साइज़";
+"section.wristSizes" = "कलाई साइज़";
+"section.connectivity" = "कनेक्टिविटी";
+"section.appleCare" = "Apple Care + कवरेज";
+
+// MARK: - Buttons
+"button.addToCart" = "कार्ट में जोड़ें";
+"button.shop" = "खरीदें";
+"button.noAppleCare" = "Apple Care + नहीं";
+"button.addAppleCare" = "Apple Care + जोड़ें";
+"button.save" = "सहेजें";
+"button.close" = "बंद करें";
+
+// MARK: - Cart
+"cart.empty.title" = "कोई उत्पाद नहीं";
+"cart.empty.description" = "कृपया कार्ट में उत्पाद जोड़ें";
+"cart.case" = "%@ %@ केस";
+"cart.loopSize" = "लूप साइज़: %@";
+"cart.subtotal" = "उप-कुल";
+"cart.tax" = "कर";
+"cart.total" = "कुल";
+
+// MARK: - Apple Care
+"appleCare.price" = "€99 या €4,99/माह";
+"appleCare.benefit" = "आकस्मिक नुकसान के लिए असीमित मरम्मत\n सुरक्षा";
+
+// MARK: - Product Detail
+"product.reviews" = "^[%d समीक्षाएँ](inflect: true)";
+"product.addReview" = "समीक्षा जोड़ें";
+
+// MARK: - Review Form
+"review.title" = "शीर्षक";
+"review.yourName" = "आपका नाम";
+"review.writeReview" = "समीक्षा लिखें";
+
+// MARK: - Product Filter
+"filter.status" = "फ़िल्टर (^[%d आइटम](inflect:true))";
+
+// MARK: - Layout
+"layout.label" = "लेआउट";
+"layout.options" = "लेआउट विकल्प";
+"layout.grid" = "ग्रिड";
+"layout.list" = "सूची";
+
+// MARK: - Loading
+"loading" = "लोड हो रहा है";
+
+// MARK: - Tips
+"tip.favorite.title" = "पसंदीदा के रूप में सहेजें";
+"tip.favorite.message" = "आपका पसंदीदा उत्पाद हमेशा पसंदीदा टैब में दिखाई देता है";
+"tip.layout.title" = "लेआउट बदलना";
+"tip.layout.message" = "आप बटन टॉगल करके लेआउट बदल सकते हैं";
+"tip.layout.action" = "अगला सुझाव";
+"tip.filter.title" = "उत्पाद फ़िल्टर";
+"tip.filter.message" = "आप इस पृष्ठ पर अपनी रुचि के उत्पादों को फ़िल्टर कर सकते हैं।";
+"tip.filter.action" = "खारिज करें";
+
+// MARK: - Featured Products
+"featured.ultra.title" = "Apple Watch Ultra";
+"featured.ultra.description" = "साहसिक कार्य के लिए तैयार";
+"featured.se.title" = "Apple Watch SE";
+"featured.se.description" = "सक्षम और किफ़ायती";
+"featured.s8.title" = "Apple Watch Series 8";
+"featured.s8.description" = "उन्नत स्वास्थ्य सुविधाएँ";
+"featured.hermes.title" = "Apple Watch Hermes";
+"featured.hermes.description" = "फैशन फॉरवर्ड";
+
+// MARK: - Categories
+"category.bands" = "Apple Watch Bands";
+"category.case" = "केस और सुरक्षा";
+"category.headphones" = "हेडफ़ोन और स्पीकर";
+"category.health" = "स्वास्थ्य और फ़िटनेस";
+"category.power" = "पावर और केबल";
+"category.chargers" = "वायरलेस चार्जर";
+
+// MARK: - Payment
+"payment.delivery" = "डिलीवरी";
+"payment.deliveryDetail" = "आपके उत्पाद आपके पते पर भेज दिए गए हैं।";
+"payment.total" = "कुल";
+
+// MARK: - Error Messages
+"error.decode" = "डेटा पार्सिंग त्रुटि: प्राप्त डेटा को प्रोसेस करने में असमर्थ। कृपया पुनः प्रयास करें या सहायता से संपर्क करें।";
+"error.invalidURL" = "URL नहीं मिला: अनुरोधित URL मौजूद नहीं है। कृपया URL सत्यापित करें और सुनिश्चित करें कि यह एक वैध संसाधन की ओर इंगित करता है।";
+"error.decodable" = "प्रकार असंगति: डेटा प्रकार अपेक्षित प्रकार से मेल नहीं खाता। कृपया डेटा जाँचें और सुनिश्चित करें कि यह अपेक्षित प्रारूप से मेल खाता है।";
+"error.invalidResponse" = "अमान्य सर्वर प्रतिक्रिया: सर्वर की प्रतिक्रिया मान्य नहीं है। कृपया बाद में पुनः प्रयास करें या सहायता से संपर्क करें।";
+"error.unknown" = "सर्वर अनुपलब्ध: सर्वर के साथ कनेक्शन स्थापित करने में असमर्थ। कृपया सुनिश्चित करें कि सर्वर ऑनलाइन है और बाद में पुनः प्रयास करें।";
+
+// MARK: - Currency
+"currency.symbol" = "€";
